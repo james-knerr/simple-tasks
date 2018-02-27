@@ -1,5 +1,12 @@
-body {
+html {
   margin: 0;
-  padding: 0;
-  font-family: sans-serif;
-}
+  height: 100%; }
+
+body {
+  height: 100%;
+  margin: 0px;
+  overflow: hidden;
+  background: #fafafa; }
+
+#root {
+  height: 100%; }

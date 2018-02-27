@@ -1,28 +1,57 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
-
-.App-title {
-  font-size: 1.5em;
-}
-
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
+.form-group {
+  min-height: 50vh; }
+  .form-group textarea {
+    height: 50vh;
+    resize: none;
+    display: block;
+    background: none;
+    padding: 0.125rem 0.125rem 0.0625rem;
+    font-size: 1rem;
+    border-width: 0;
+    border-color: transparent;
+    line-height: 1.9;
+    width: 100%;
+    color: transparent;
+    transition: all 0.28s ease;
+    box-shadow: none;
+    font-family: 'Roboto', sans-serif; }
+  .form-group .control-label {
+    position: absolute;
+    top: 5rem;
+    pointer-events: none;
+    padding-left: 0.125rem;
+    z-index: 1;
+    color: #b3b3b3;
+    font-size: 1rem;
+    font-weight: normal;
+    transition: all 0.28s ease;
+    font-family: 'Roboto', sans-serif; }
+  .form-group .bar {
+    position: relative;
+    border-bottom: 0.0625rem solid #999;
+    display: block; }
+    .form-group .bar::before {
+      content: '';
+      height: 0.125rem;
+      width: 0;
+      left: 50%;
+      bottom: -0.0625rem;
+      position: absolute;
+      background: #607d8b;
+      transition: left 0.28s ease, width 0.28s ease;
+      z-index: 2; }
+  .form-group textarea:focus,
+  .form-group textarea:valid {
+    color: #333; }
+    .form-group textarea:focus ~ .control-label,
+    .form-group textarea:valid ~ .control-label {
+      font-size: 0.8rem;
+      color: gray;
+      top: 3.5rem; }
+  .form-group textarea:focus {
+    outline: none; }
+    .form-group textarea:focus ~ .control-label {
+      color: #607d8b; }
+    .form-group textarea:focus ~ .bar::before {
+      width: 100%;
+      left: 0; }
